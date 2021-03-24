@@ -22,7 +22,7 @@
               name: "images",
               widget: "list",
               required: true,
-              filed: { label: "صورة", name: image, widget: "image" },
+              field: { label: "صورة", name: image, widget: "image" },
             },
           ],
       },
