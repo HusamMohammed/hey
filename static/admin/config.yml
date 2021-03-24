@@ -167,6 +167,8 @@
               required: true,
             },
             { label: "البريد الالكتروني", name: "email", required: true },
+            { label: "عنصر تواصل", name: 'item4',required: false }, 
+            { label: "عنصر تواصل", name: 'item5',required: false }, 
             { label: "الموقع", name: "location", required: true },
             { label: "فيسبوك", name: "facebook", required: false },
             { label: "انستاغرام", name: "instagram", required: false },
