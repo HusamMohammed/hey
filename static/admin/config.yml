@@ -1,0 +1,160 @@
+{ 
+
+  local_backend: true,
+  backend: {
+      name: "git-gateway",
+      repo: "HusamMohammed/point-site",
+      branch: "main"
+    }, 
+
+    media_folder: "content/assets", 
+    public_folder: "/assets",
+
+    collections: [
+      {
+        name: "home", 
+        label: "الرئيسية", 
+        folder: "content/data/home", 
+        extension: "json", 
+        format: "json", 
+        editor: { preview: false },
+        fields: [
+          { label: "النص الرئيسي", name: "mainText", required: true }, 
+          { label: "صور الخلفية", name: "images", widget: "list", required: true,
+            filed: {label: "صورة", name: image, widget: "image"}
+          }
+
+        ] 
+
+      },
+      {
+        name: "about", 
+        label: "عنا", 
+        folder: "content/data/about", 
+        extension: "json", 
+        format: "json", 
+        editor: { preview: false },
+        fields: [
+          { label: "العنوان", name: "title", required: true }, 
+          { label: "النص التعريفي", name: "description", required: true }, 
+
+        ] 
+
+      },
+      { 
+        name: "services", 
+        label: "سلايدر الخدمات العلوي", 
+        label_singular: "خدمة", 
+        identifier_field: "name", 
+        media_folder: "", 
+        public_folder: "", 
+        folder: "content/data/services1", 
+        extension: "json", 
+        format: "json", 
+        create: true, 
+        editor: { preview: false },
+        fields: [
+          { label: "اسم الخدمة", name: "name", required: true }, 
+          { label: "صورة", name: "image", widget: "image", required: true }, 
+          { label: "نص توصيفي", name: "description", required: true }
+        ] 
+      },
+      { 
+        name: "services", 
+        label: "سلايدر الخدمات السفلي", 
+        label_singular: "خدمة", 
+        identifier_field: "name", 
+        media_folder: "", 
+        public_folder: "", 
+        folder: "content/data/services1", 
+        extension: "json", 
+        format: "json", 
+        create: true, 
+        editor: { preview: false },
+        fields: [
+          { label: "اسم الخدمة", name: "name", required: true }, 
+          { label: "صورة", name: "image", widget: "image", required: true }, 
+          { label: "نص توصيفي", name: "description", required: true }
+        ] 
+      },
+      { 
+        name: "projects1", 
+        label: "الأعمال", 
+        label_singular: "عمل",  
+        media_folder: "", 
+        public_folder: "", 
+        folder: "content/data/projects1", 
+        extension: "json", 
+        format: "json", 
+        create: true, 
+        editor: { preview: false },
+        fields: [
+          { label: "اسم العمل", name: "title", required: true }, 
+          { label: "صورة", name: "image", widget: "image", required: true },
+          { label: "نص توصيفي للعمل", name: "description", required: true },
+          { label: "؟هل يوجد رابط", name: "isLink", widget: "boolean", default: false },
+          { label: "لينك", name: "url", widget: "string", required: false}, 
+          # { label: "Order", name: "order", widget: "hidden", default: 1}
+        ] 
+      },
+      # { 
+      #   name: "projects2", 
+      #   label: "سلايدر ألاعمال السفلي", 
+      #   label_singular: "عمل",  
+      #   media_folder: "", 
+      #   public_folder: "", 
+      #   folder: "content/data/projects2", 
+      #   extension: "json", 
+      #   format: "json", 
+      #   create: true, 
+      #   editor: { preview: false },
+      #   fields: [
+      #     { label: "اسم العمل", name: "title", required: true }, 
+      #     { label: "صورة", name: "image", widget: "image", required: true },
+      #     { label: "isVideo?", name: "isVideo", widget: "boolean", default: false },
+      #     { label: "معرف الفديو (Youtube Video ID)", name: "videoId", widget: "string", required: false},
+      #       # media_folder: "/static",
+      #       # public_folder: "/{{public_folder}}/vids",
+      #     #  pattern: ["\\.(mp4|ogg|webm)$", "Upload only video, nothing else"] }, 
+      #     { label: "نص توصيفي للعمل", name: "description", required: true },
+      #     # { label: "Order", name: "order", widget: "hidden", default: 2}
+      #   ] 
+      # },
+      { 
+        name: "clients", 
+        label: "عملاؤنا", 
+        label_singular: "عميل", 
+        identifier_field: "name", 
+        media_folder: "", 
+        public_folder: "", 
+        folder: "content/data/clients", 
+        extension: "json", 
+        format: "json", 
+        create: true, 
+        editor: { preview: false },
+        fields: [
+          { label: "اسم العميل", name: "name", required: true }, 
+          { label: "صورة", name: "image", widget: "image", required: true }, 
+        ] 
+      },
+      {
+        name: "contact", 
+        label: "مغلومات التواصل", 
+        folder: "content/data/contact", 
+        extension: "json", 
+        format: "json", 
+        editor: { preview: false },
+        fields: [
+          { label: "", name: "title", widget: 'string', default: "معلومات الاتصال" }, 
+          { label: "رقم  الهاتف", name: "phone", widget: "string", required: true }, 
+          { label: "البريد الالكتروني", name: "email", required: true }, 
+          { label: "الموقع", name: "location", required: true }, 
+          { label: "فيسبوك", name: "facebook", required: false }, 
+          { label: "انستاغرام", name: "instagram", required: false }, 
+          { label: "تويتر", name: "twitter", required: false }, 
+          { label: "لينكدين", name: "linkedin", required: false }, 
+          { label: "سناب شات", name: "snapchat", required: false }, 
+        ] 
+      },
+    ] 
+}

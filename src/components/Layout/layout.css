@@ -1,0 +1,685 @@
+@font-face {
+  font-family: "Expo Arabic";
+  font-style: normal;
+  font-weight: 300;
+  src: url(../../fonts/ExpoArabic-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Expo Arabic";
+  font-style: normal;
+  font-weight: 500;
+  src: url(../../fonts/ExpoArabic-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Expo Arabic";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../../fonts/ExpoArabic-Bold.ttf) format("truetype");
+}
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  /* font: 112.5%/1.45em georgia, serif, sans-serif; */
+  box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* color: hsla(0, 0%, 0%, 0.8); */
+  /* font-family: georgia, serif; */
+  font-family: "Expo Arabic";
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+progress {
+  vertical-align: baseline;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration: none;
+}
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+b,
+strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  color: inherit;
+  text-rendering: optimizeLegibility;
+}
+
+ul {
+  list-style: none;
+}
+
+svg:not(:root) {
+  /* overflow: scroll; */
+  overflow: hidden;
+}
+
+hr {
+  box-sizing: content-box;
+  overflow: visible;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  background: hsla(0, 0%, 0%, 0.2);
+  border: none;
+  height: 1px;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  margin: 0;
+}
+button {
+  padding: 0;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+}
+button:hover,
+button:focus {
+  outline: none;
+}
+button,
+input {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+[type="reset"],
+[type="submit"],
+button,
+html [type="button"] {
+  -webkit-appearance: none;
+}
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner,
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring,
+button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+textarea {
+  overflow: auto;
+}
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+* {
+  box-sizing: inherit;
+}
+*:before {
+  box-sizing: inherit;
+}
+*:after {
+  box-sizing: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+p,
+form,
+ul,
+figure {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 100%;
+  }
+}
+/*
+=============== 
+Sidebar Animation
+===============
+*/
+.sidebar.active li {
+  animation: slideRight 0.5s ease-in-out 0.3s forwards;
+}
+.sidebar.active li:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+.sidebar.active li:nth-of-type(2) {
+  animation-delay: 0.75s;
+}
+.sidebar.active li:nth-of-type(3) {
+  animation-delay: 1s;
+}
+.sidebar.active li:nth-of-type(4) {
+  animation-delay: 1.25s;
+}
+.sidebar.active li:nth-of-type(5) {
+  animation-delay: 1.5s;
+}
+.sidebar.active li:nth-of-type(6) {
+  animation-delay: 1.75s;
+}
+.sidebar.active li:nth-of-type(7) {
+  animation-delay: 2s;
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/*
+=============== 
+Sidebar Animation
+===============
+*/
+
+/*
+=================================================
+                General Swiper
+=================================================
+*/
+.swiper-button-prev,
+.swiper-button-next {
+  height: 1rem;
+  width: 1rem;
+  padding: 0.75rem;
+  margin-top: 0;
+  background-color: #e8ecef;
+  border-radius: 50%;
+  transition: background-color 300ms ease;
+  transform: translateY(-50%);
+}
+.swiper-container-rtl .swiper-button-prev {
+  right: 0;
+}
+.swiper-container-rtl .swiper-button-next {
+  left: 0;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #505965;
+  font-size: 10px;
+  transition: color 300ms ease;
+}
+.swiper-button-prev:hover::after,
+.swiper-button-next:hover::after {
+  color: #fff;
+}
+@media (min-width: 991px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    height: 18px;
+    width: 18px;
+    padding: 18px;
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 18px;
+  }
+}
+/*
+###################################################
+*/
+
+/*
+=================================================
+                   Services Swiper
+=================================================
+*/
+.services .swiper-container-initialized {
+  padding-bottom: 5rem;
+}
+.services .swiper-slide {
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+.services .swiper-button-prev,
+.services .swiper-button-next {
+  top: 40%;
+}
+.services .swiper-slide .services__card {
+  /* transition: none; */
+}
+.services .swiper-slide-active .services__card {
+  background-color: #fff;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: background-color 1s ease-in-out, box-shadow 1s ease-in-out;
+}
+@media (min-width: 991px) {
+  .services .swiper-container-initialized {
+    padding-right: 1rem;
+    padding-bottom: 8rem;
+  }
+  .services .swiper-slide {
+    padding: 0 2rem;
+  }
+}
+@media (min-width: 1250px) {
+  .services .swiper-slide {
+    padding: 0 3.5rem;
+  }
+}
+/* .services .swiper-slide .service__card {
+  transition: none;
+}
+.services .swiper-slide-active .service__card {
+  background-color: #1e99cf;
+  height: 250px;
+  transition: height 1s ease;
+} */
+/* .services .swiper-slide-active .service__card h3 {
+  position: static;
+  margin-top: 1rem;
+  color: #fff;
+}
+.services .swiper-slide-active .service__card p {
+  position: static;
+  visibility: visible;
+  margin-top: 12px;
+  transform: scaleY(1);
+} */
+
+.services .swiper-button-prev:hover,
+.services .swiper-button-next:hover,
+.services .swiper-button-prev:active,
+.services .swiper-button-next:active {
+  background-color: #1e99cf;
+}
+/* @media (min-width: 640px) {
+  .services .swiper-slide-active .service__card {
+    height: 300px;
+  }
+  .services .swiper-slide-active .service__card h3 {
+    margin-top: 20px;
+  }
+  .services .swiper-slide-active .service__card p {
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .services .swiper-slide-active .service__card {
+    height: 450px;
+  }
+  .services .swiper-slide-active .service__card h3 {
+    margin-top: 30px;
+  }
+  .services .swiper-slide-active .service__card p {
+    margin-top: 1.5rem;
+  }
+}
+@media (min-width: 1440px) {
+  .services .swiper-slide-active .service__card {
+    width: 220px;
+    height: 330px;
+  }
+  .services .swiper-slide-active .service__card h3 {
+    margin-top: 1.5rem;
+  }
+  .services .swiper-slide-active .service__card p {
+    margin-top: 1rem;
+  }
+} */
+/*
+###################################################
+*/
+
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/*
+=================================================
+                   Pojects Swiper
+=================================================
+*/
+
+.projects .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.projects .swiper-pagination-bullets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+}
+.projects .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #f5deb3;
+  transition: background-color 400ms ease;
+  opacity: 1;
+}
+.projects .swiper-pagination-bullet-active {
+  width: 14px;
+  height: 14px;
+  background-color: #f29309;
+}
+
+@media (min-width: 990px) {
+  .projects .swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+  }
+  .projects .swiper-pagination-bullet-active {
+    width: 18px;
+    height: 18px;
+  }
+  .projects .projects__reverse .swiper-pagination-bullets {
+    justify-content: end;
+    padding-left: 25%;
+  }
+}
+/*
+###################################################
+*/
+
+/*
+=================================================
+                   Clients Swiper
+=================================================
+*/
+.clients .swiper-wrapper {
+  align-items: center;
+}
+/* 
+.clients .swiper-slide {
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+}*/
+.clients .swiper-button-prev:hover,
+.clients .swiper-button-next:hover,
+.clients .swiper-button-prev:active,
+.clients .swiper-button-next:active {
+  background-color: #7c1e67;
+}
+/* .clients .swiper-slide .clients__img {
+  opacity: 0.2;
+  transition: opacity 400ms ease;
+}
+.clients .swiper-slide-prev .clients__img,
+.clients .swiper-slide-next .clients__img {
+  opacity: 0.6;
+}
+.clients .swiper-slide-active .clients__img {
+  opacity: 1;
+} */
+/* @media (min-width: 50px) {
+  .clients .swiper-button-prev {
+    right: 0;
+  }
+  .clients .swiper-button-next {
+    left: 0;
+  } */
+/* .clients .swiper-slide {
+    width: 200px;
+    height: 200px;
+  } */
+/* } */
+/*
+###################################################
+*/
+
+/*
+=================================================
+                   React Slick
+=================================================
+*/
+.slick-list {
+  padding-bottom: 1rem;
+}
+@media (min-width: 991px) {
+  .slick-list {
+    padding-bottom: 2rem;
+  }
+}
+/*
+###################################################
+*/
+
+/*
+=================================================
+                   Services React Slick
+=================================================
+*/
+/* .services .slick-list {
+  padding-bottom: 2.5rem;
+}
+.services .slick-slide {
+  padding: 0 30px;
+}
+@media (min-width: 991px) {
+  .services .slick-list {
+    padding-bottom: 4rem;
+  }
+  .services .slick-slide {
+    padding: 0 2rem;
+  }
+}
+@media (min-width: 1250px) {
+  .services .slick-slide {
+    padding: 0 3rem;
+  }
+} */
+/*
+###################################################
+*/
+
+/*
+=================================================
+                   Projects React Slick
+=================================================
+*/
+.projects .slick-slider {
+  cursor: grab;
+}
+.projects .slick-slider:active {
+  cursor: grabbing;
+}
+.projects .slick-slide {
+  padding: 0 30px;
+}
+@media (min-width: 991px) {
+  .projects .slick-slide {
+    padding: 0 20px;
+  }
+}
+/*
+###################################################
+*/
+
+/*
+=================================================
+                   Clients React Slick
+=================================================
+*/
+.clients .slick-list {
+  padding-bottom: 0;
+}
+/*
+###################################################
+*/
+
+[data-sal="slide-uphero"] {
+  transform: translateY(70px);
+}
+[data-sal="slide-upfooter"] {
+  transform: translateY(50px);
+}
+
+[data-sal="slide-leftcircle"] {
+  /* opacity: 1; */
+  transform: translateX(90%);
+}
+[data-sal="slide-rightcircle"] {
+  /* opacity: 1; */
+  transform: translateX(-90%);
+}
+[data-sal][data-sal-delay="1200"] {
+  transition-delay: 1.2s;
+}
+@media (max-width: 1023px) {
+  [data-sal="slide-leftcircle"] {
+    /* opacity: 1; */
+    transform: translateX(60%);
+  }
+  [data-sal="slide-rightcircle"] {
+    /* opacity: 1; */
+    transform: translateX(-60%);
+  }
+}
+@media (max-width: 639px) {
+  [data-sal="slide-leftcircle"] {
+    /* opacity: 1; */
+    transform: translateX(30%);
+  }
+  [data-sal="slide-rightcircle"] {
+    /* opacity: 1; */
+    transform: translateX(-30%);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translateZ(0);
+    visibility: visible;
+  }
+}
+@keyframes slideUp {
+  0% {
+    transform: translate3d(0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, -100%, 0);
+    visibility: hidden;
+  }
+}
+
+/* .projects .gatsby-image-wrapper {
+  transition: transform 0.8s;
+}
+
+.projects .gatsby-image-wrapper:hover {
+  transform: scale(1.2);
+} */
