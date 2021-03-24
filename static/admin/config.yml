@@ -11,6 +11,8 @@
         name: "home",
         label: "الرئيسية",
         folder: "content/data/home",
+        media_folder: "",
+        public_folder: "",
         extension: "json",
         format: "json",
         editor: { preview: false },
