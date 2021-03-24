@@ -25,7 +25,7 @@ const Hero = () => {
         nodes {
           relativePath
           childImageSharp {
-            fluid(maxWidth: 4000, quality: 100) {
+            fluid(maxWidth: 1920, quality: 85) {
               ...GatsbyImageSharpFluid
             }
           }

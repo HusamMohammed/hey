@@ -3,18 +3,21 @@
   font-style: normal;
   font-weight: 300;
   src: url(../../fonts/ExpoArabic-Light.ttf) format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: "Expo Arabic";
   font-style: normal;
   font-weight: 500;
   src: url(../../fonts/ExpoArabic-Medium.ttf) format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: "Expo Arabic";
   font-style: normal;
   font-weight: 700;
   src: url(../../fonts/ExpoArabic-Bold.ttf) format("truetype");
+  font-display: swap;
 }
 html {
   -ms-text-size-adjust: 100%;
