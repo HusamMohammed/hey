@@ -1,7 +1,9 @@
 {
-  "title": "أعمالنا 1",
+  "title": "أعمالنا 123",
   "description": "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى.",
   "image": "project1.png",
   "isLink": false,
-  "url": ""
+  "url": "",
+  "title_en": "hry",
+  "description_en": "huh"
 }
